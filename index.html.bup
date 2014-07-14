@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!--<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, target-densitydpi=device-dpi" />-->
+        <meta name="viewport" content="width=device-width">
+        <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+        <link rel="stylesheet" href="css/jquery.mobile-1.2.1.min.css" />
+        <script src="js/json2.js"></script>
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/jquery.mobile-1.2.1.min.js"></script>
+        <script src="js/jstorage.js"></script>
+        <title>Hello World</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+        //var carter = "I-learn-JavaScript";
+        //var arlene3 = carter.split("-");
+
+        //var foo = Date.now()
+
+        //$.jStorage.set(foo, arlene3);
+
+
+        //console.log(foo);
+        //console.log(arlene3);
+
+        //data = $.jStorage.get("geodaten", new Array());
+
+
+        </script>
+
+        <div class="app">
+        <!-- Start of Start page -->
+        <div data-role="page" id="Start">
+
+        <div data-role="header">
+                <h1>Workout</h1>
+                <a href="#Prefences" data-role="button" data-iconpos="notext" class="ui-btn-right" data-icon="gear"></a>
+        </div><!-- /header -->
+
+        <div data-role="content">
+                <ul data-role="listview" data-inset="true" data-filter="true" data-icon="arrow-r">
+                        <li><a href="#bar">Leer</a></li>
+                </ul>
+        </div><!-- /content -->
+
+        </div><!-- /page -->
+
+
+        <!-- Start of Prefences -->
+        <div data-role="page" id="Prefences">
+
+        <div data-role="header">
+        <a href="#Start" data-role="button" data-iconpos="notext"  data-icon="home"></a>
+                <h1>Prefences</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+                  <ul data-role="listview" data-inset="true" data-filter="true" data-icon="arrow-r">
+                        <li><a href="#Equipment">Equipment</a></li>
+                        <li><a class="fflush" href="#Flush" data-rel="dialog">Speicher L&ouml;schen</a></li>
+
+                </ul>
+
+        </div><!-- /content -->
+
+        </div><!-- /page -->
+
+        <!-- Start of Popup Flush -->
+        <div data-role="page" id="Flush">
+
+        <div data-role="header">
+                <h1>Flush</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+
+         <a href="#" data-rel="back" class="flush" data-role="button">L&ouml;schen</a>
+         <a href="#" data-rel="back" data-role="button">Cancle</a>
+
+        </div><!-- /content -->
+
+        </div><!-- /page -->
+
+        <!-- Start of Equipment -->
+        <div data-role="page" id="Equipment">
+
+        <div data-role="header">
+        <a href="#Start" data-role="button" data-iconpos="notext"  data-icon="home"></a>
+                <h1>Equipment</h1>
+        <a href="#AddEquipment" data-role="button" data-iconpos="notext"  data-icon="add"></a>
+        </div><!-- /header -->
+
+        <div data-role="content">
+                  <ul data-role="listview" data-inset="true" data-filter="true" data-icon="arrow-r">
+                </ul>
+
+        </div><!-- /content -->
+
+        </div><!-- /page -->
+
+        <!-- Start of AddEquipment -->
+        <div data-role="page" id="AddEquipment">
+
+        <div data-role="header">
+        <a href="#Equipment" data-role="button" data-iconpos="notext"  data-icon="delete"></a>
+                <h1>Add Equipment</h1>
+        <a href="#" name="check" data-role="button" data-iconpos="notext"  data-icon="check"></a>
+        </div><!-- /header -->
+
+        <div data-role="content">
+                <input class="addEq" type="text" name="num" id="text-basic" placeholder="Num" value="">
+                <input class="addEq" type="text" name="name" id="text-basic" placeholder="Name" value="">
+                <input class="addEq" type="text" name="Beschreibung" id="text-basic" placeholder="Beschreibung" value="">
+                <label for="sitz">Sitz:</label></br>
+                <input class="addEq" type="range" name="sitz" id="slider-fill" value="0" min="0" max="9" data-highlight="true"></br>
+                <label for="polster">Polster:</label></br>
+                <input class="addEq" type="range" name="polster" id="slider-fill" value="0" min="0" max="9" data-highlight="true"></br>
+                <label for="stange">Stange:</label></br>
+                <input class="addEq" type="range" name="stange" id="slider-fill" value="0" min="0" max="9" data-highlight="true"></br>
+                <label for="satz">St&Atilde;&curren;tze:</label></br>
+                <input class="addEq" type="range" name="satz" id="slider-fill" value="0" min="0" max="50" data-highlight="true"></br>
+                <label for="wiederholungen">Wiederholungen:</label></br>
+                <input class="addEq" type="range" name="wiederholungen" id="slider-fill" value="0" min="0" max="50" data-highlight="true"></br>
+                <label for="gewicht">Gewicht:</label></br>
+                <input class="addEq" type="range" name="gewicht" id="slider-fill" value="0" min="0" max="100" data-highlight="true"></b>
+                <input class="addEq" type="reset" name="gewicht" id="button" value="Reseet" data-highlight="true"></b> 
+  <span></span>
+
+        </div><!-- /content -->
+
+        </div><!-- /page -->
+<script>
+
+//function nll ()
+//{
+//return 1;
+//}
+
+
+//-->
+
+$("a.flush").click( function()
+{
+         $.jStorage.flush();
+});
+
+$("a[name='check']").click( function()
+{
+        dataArr = new Array();
+        $("input.addEq").each(function()
+         {
+                 var name = $(this).attr('name');
+                 var value = $(this).val();
+
+                 dataArr[name] = value;
+                 //dataArr.push(value);
+         });
+        //console.log($("input.addEq").serializeArray());
+
+        if (dataArr['num'])
+        {
+        $.jStorage.set(dataArr['num'], $("input.addEq").serializeArray());
+        }
+
+        //console.log($.jStorage.index());
+
+
+        var storage = $.jStorage.index();
+
+        //console.log(storage);
+
+        $.each(storage, function(index, valuee)
+        {
+
+                console.log("aus dem Speicher ->");
+                names = $.jStorage.get(valuee);
+                $.each(names, function(key, val)
+                {
+                 console.log(val.name);
+                });
+                console.log("- aus dem Speicher ");
+        });
+        $("input").empty();
+        console.log('ENDE');
+
+});
+</script>
+
+
+        <!--    <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>-->
+    </body>
+</html>

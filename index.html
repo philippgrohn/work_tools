@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!--<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, target-densitydpi=device-dpi" />-->
+        <meta name="viewport" content="width=device-width">
+        <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+        <link rel="stylesheet" href="css/jquery.mobile-1.2.1.min.css" />
+        <script src="js/json2.js"></script>
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/jquery.mobile-1.2.1.min.js"></script>
+        <script src="js/jstorage.js"></script>
+        <title>Tools</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+        //var carter = "I-learn-JavaScript";
+        //var arlene3 = carter.split("-");
+
+        //var foo = Date.now()
+
+        //$.jStorage.set(foo, arlene3);
+
+
+        //console.log(foo);
+        //console.log(arlene3);
+
+        //data = $.jStorage.get("geodaten", new Array());
+
+
+        </script>
+
+        <div class="app">
+        <!-- Start of Start page -->
+        <div data-role="page" id="Start">
+
+        <div data-role="header">
+                <h1>Tools</h1>
+                <!--<a href="#Prefences" data-role="button" data-iconpos="notext" class="ui-btn-right" data-icon="gear"></a>-->
+        </div><!-- /header -->
+
+        <div data-role="content">
+                <ul data-role="listview" data-inset="true" data-filter="true" data-icon="arrow-r">
+                        <li><a href="#site_kfaktor">Luftmenge per K-Faktor</a></li>
+                </ul>
+        </div><!-- /content -->
+
+        </div><!-- /page -->
+
+
+        <!-- Start of Prefences -->
+        <div data-role="page" id="Prefences">
+
+        <div data-role="header">
+        <a href="#Start" data-role="button" data-iconpos="notext"  data-icon="home"></a>
+                <h1>Prefences</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+                  <ul data-role="listview" data-inset="true" data-filter="true" data-icon="arrow-r">
+                        <li><a href="#Equipment">Equipment</a></li>
+                        <li><a href="#Flush" data-rel="dialog">Speicher L&ouml;schen</a></li>
+
+                </ul>
+
+        </div><!-- /content -->
+
+        </div><!-- /page -->
+
+        <!-- Start of Popup Flush -->
+        <div data-role="page" id="Flush">
+
+        <div data-role="header">
+                <h1>Flush</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+
+         <a href="#" data-rel="back" class="flush" data-role="button">L&ouml;schen</a>
+         <a href="#" data-rel="back" data-role="button">Cancle</a>
+
+        </div><!-- /content -->
+
+        </div><!-- /page -->
+
+        <!-- Start of Equipment -->
+        <div data-role="page" id="Equipment">
+
+        <div data-role="header">
+        <a href="#" data-rel="back" data-role="button" data-iconpos="notext"  data-icon="back"></a>
+                <h1>Equipment</h1>
+        <a href="#AddEquipment" name="addNew" data-role="button" data-iconpos="notext"  data-icon="add"></a>
+        </div>
+	<!-- /header -->
+
+	<!-- Start content -->
+        <div data-role="content">
+                <ul id="equList" data-role="listview" data-inset="true" data-filter="true" data-icon="arrow-r">
+                </ul>
+
+        </div>
+	<!-- /content -->
+
+        </div><!-- /page -->
+
+        <!-- Start of AddEquipment -->
+        <div data-role="page" id="AddEquipment">
+
+        <div data-role="header">
+        <a href="#" name="back" data-rel="back" data-role="button" data-iconpos="notext"  data-icon="delete"></a>
+                <h1>Add Equipment</h1>
+        <a href="#" name="check" data-role="button" data-iconpos="notext"  data-icon="check"></a>
+        </div><!-- /header -->
+
+        <div data-role="content">
+	 <form id="addEq" name="new">
+                <input class="addEq" type="text" name="num" id="text-basic" placeholder="Num" value="">
+                <input class="addEq" type="text" name="name" id="text-basic" placeholder="Name" value="">
+                <input class="addEq" type="text" name="Beschreibung" id="text-basic" placeholder="Beschreibung" value="">
+                <label for="sitz">Sitz:</label></br>
+                <!--<input class="addEq" type="range" name="sitz" id="slider-fill" value="6" min="0" max="9" data-highlight="true"></br>-->
+		<input class="addEq" type="number" data-type="range" name="sitz" id="slider-fill" value="0" min="0" max="9" data-highlight="true"><br>
+                <label for="polster">Polster:</label></br>
+                <input class="addEq" type="number" data-type="range" name="polster" id="slider-fill" value="0" min="0" max="9" data-highlight="true"></br>
+                <label for="stange">Stange:</label></br>
+                <input class="addEq" type="number" data-type="range" name="stange" id="slider-fill" value="0" min="0" max="9" data-highlight="true"></br>
+                <label for="satz">St&uuml;tze:</label></br>
+                <input class="addEq" type="number" data-type="range" name="satz" id="slider-fill" value="0" min="0" max="50" data-highlight="true"></br>
+                <label for="wiederholungen">Wiederholungen:</label></br>
+                <input class="addEq" type="number" data-type="range" name="wiederholungen" id="slider-fill" value="0" min="0" max="50" data-highlight="true"></br>
+                <label for="gewicht">Gewicht:</label></br>
+                <input class="addEq" type="number" data-type="range" name="gewicht" id="slider-fill" value="0" min="0" max="100" data-highlight="true"></b>
+                <input type="reset" id="button" value="Reseet" data-highlight="true"></b>
+	  </form> 
+  <span></span>
+
+        </div><!-- /content -->
+
+        </div><!-- /page -->
+
+
+<!--Start of AddEquipment -->
+        <div data-role="page" id="site_kfaktor">
+
+        <div data-role="header">
+        <a href="#" name="back" data-rel="back" data-role="button" data-iconpos="notext"  data-icon="delete"></a>
+                <h1>Luftmenge</h1>
+        <a href="#" name="check" data-role="button" data-iconpos="notext"  data-icon="check"></a>
+        </div><!-- /header -->
+
+        <div data-role="content">
+         <form id="math1" name="new">
+		<div data-role="fieldcontain">
+		<label for="kfaktor">K-Faktor :</label>
+                <input class="math" type="number" data-type="range" name="kfaktor" id="slider-fill" value="0" min="0" max="1000" data-highlight="true">
+		</div>
+		<div data-role="fieldcontain">
+		<label for="pressure">Druck   :</label>
+                <input class="math" type="number" data-type="range" name="pressure" id="slider-fill" value="0" min="0" max="1000" data-highlight="true">
+		</div>
+		<div data-role="fieldcontain">
+      		<select class="math" name="unit" id="unit">
+			<option value="unit_pa">Pa</option>
+      			<option value="unit_hpa">hPa</option>
+      			<option value="unit_mbar">mbar</option>
+      			<option value="unit_bar">bar</option>
+ 	  	</select>
+		</div>
+		</br>
+          </form>
+  <span id="result"></span>
+
+        </div><!-- /content -->
+
+        </div><!-- /page -->
+
+<script>
+
+//function nll ()
+//{
+//return 1;
+//}
+
+
+//-->
+
+$("a.flush").click( function()
+{
+         $.jStorage.flush();
+
+	$("ul#equList").empty();
+
+	getEquNames();
+});
+
+$("div[id='site_kfaktor']  a[name='check']").click( function()
+{
+	console.log($('.math1'));
+	
+	dataArr = new Array();
+	//var eqId = $("form#math1[name='']").attr("name")
+	
+	//if(eqId !== undefined) {
+	//console.log('not');
+	//$.jStorage.deleteKey(eqId);
+        //dataArr['id'] = eqId; 
+	//} else {
+	//console.log('Ok');
+	//}
+
+
+	//console.log('-------------------------');
+
+	 $(".math").each(function()
+         {
+		if($(this).attr('name') != "") {
+		//	console.log('-------------------------');
+		//	console.log($(this).val());
+		//	console.log($(this));
+		//	console.log('-------------------------');
+                	var name = $(this).attr('name');
+                	var value = $(this).val();
+
+			if(name == "unit") {
+
+				switch (value) {
+ 						 case "unit_pa":
+							dataArr['unit_factor'] = "1";
+    							break;
+ 						 case "unit_hpa":
+							dataArr['unit_factor'] = "0.01";
+    							break;
+ 						 case "unit_mbar":
+							dataArr['unit_factor'] = "0.01";
+    							break;
+ 						 case "unit_bar":
+							dataArr['unit_factor'] = "0.00001";
+    							break;
+				}
+
+			};
+
+	  		dataArr[name] = value;
+               		//dataArr.push(value);
+	 	};
+         });
+      
+	dataArr['result_lh'] = dataArr['kfaktor'] * Math.sqrt(dataArr['pressure'] / dataArr['unit_factor']);
+	dataArr['result_cbm'] = dataArr['result_lh'] * "3.6";
+	
+	console.log(dataArr); 
+	
+	$("<p name=" + dataArr['result_lh']  +  " >" + dataArr['result_lh']  + " l/s</p>").appendTo("span#result");
+	$("<p name=" + dataArr['result_cbm']  +  " >" + dataArr['result_cbm']  + " m&sup3;/h</p>").appendTo("span#result");
+  //      if (dataArr['num'])
+    //    {
+        //$.jStorage.set(dataArr['num'], $("input.addEq").serializeArray());
+   //     $.jStorage.set(dataArr['id'], dataArr);
+   //     $("form#addEq").get(0).reset();
+//	history.back(1);
+  //      }
+
+        //console.log($.jStorage.index());
+	
+//	getEquNames();
+	
+//	$("ul#equList").listview( "refresh" );
+
+
+});
+
+
+$("a[name='addNew']").click( function()
+{
+	resetForm("addEq");
+	$("form#addEq").removeAttr("name");
+//	$('.addEq')
+
+});
+
+
+$("a.editEquipment").live( "click",  function()
+{
+
+//	console.log($(this));
+//	console.log($(this).attr('name'));
+	
+	names = $.jStorage.get($(this).attr('name'));
+     //   console.log(names['id']);
+
+
+	$.each(names , function(index, value)
+         {
+		console.log(index + ' - ' + value );
+		$("input.addEq[name=" + index + "]").val(value);
+	//	$("input.addEq[name=" + index + "][value=" + value + "]");
+               //  var name = $(this).attr('name');
+               //  var value = $(this).val();
+
+               //  dataArr[name] = value;
+                 //dataArr.push(value);
+         });
+	
+	$("form#addEq").attr({name: names['id']});
+	
+	$("input.addEq[id='slider-fill']").slider("refresh");
+
+	
+});
+
+
+function getEquNames() {
+
+
+	$("ul#equList").empty();
+	var storage = $.jStorage.index();
+
+	console.log(storage);
+
+        $.each(storage, function(index, valuee)
+        {
+
+
+
+                names = $.jStorage.get(valuee);
+                //console.log(names);
+		
+                //console.log(names['name']);
+               // $.each(names, function(key, val)
+               // {
+               // });
+
+
+	$("<li><a href='#AddEquipment' class='editEquipment' name=" + names['id']  +  " >" + names['name']  + "</a></li>").appendTo("ul#equList");
+	});	
+
+//	$("ul#equList").selectmenu( "refresh" );
+};
+
+function resetForm(id) {
+	$('#'+id).each(function(){
+	        this.reset();
+	});
+}
+
+
+getEquNames();
+
+
+</script>
+
+
+        <!--    <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>-->
+    </body>
+</html>
